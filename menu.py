@@ -1,9 +1,7 @@
 class Menu:
-    players = {}
-    points = {}
     menu_number = 0
 
-    def set(self, players, points):
+    def __init__(self, players, points):
         self.players = players
         self.points = points
 
@@ -13,12 +11,12 @@ class Menu:
                                  '2. Просмотреть очки игроков \n '
                                  '3. Начать новую игру \n '
                                  '4. Закончить игру \n')
-        self.checkout_number(def_game)
+        self.__checkout_number(def_game)
 
-    def checkout_number(self, def_game):
+    def __checkout_number(self, def_game):
         if self.menu_number == '1':
             for key in self.players:
-                print(key + ':', self.players[key])
+                print(key.player_number + ':', key.cards)
             self.set_number(def_game)
         elif self.menu_number == '2':
             print(self.points)
