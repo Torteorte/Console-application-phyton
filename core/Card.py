@@ -1,4 +1,4 @@
-from constants import non_number_names_in_durak
+from constants.constants import non_number_names_in_durak
 
 
 class Card:
@@ -25,6 +25,6 @@ class CardForDurak(Card):
 
         self.nominal = nominal
 
-    def set_nominal(self, trump):
+    def update_nominal_by_trump(self, trump):
         if trump == self.suit:
             self.nominal += 9

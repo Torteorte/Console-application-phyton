@@ -1,4 +1,5 @@
-from utils import sum_of_cards
+from utils.utils import calc_points_player_cards
+
 
 class Player:
     def __init__(self, player_number):
@@ -12,5 +13,5 @@ class Player:
     def __repr__(self):
         return "%s: %s" % (self.player_number, self.cards)
 
-    def get_points(self):
-        self.points = sum_of_cards(self.cards)
+    def calc_points(self):
+        self.points = calc_points_player_cards(self.cards)
