@@ -32,12 +32,3 @@ def get_users_who_will_play_durak_game():
     except ValueError:
         print('(╯° □ °)╯ ┻━━┻ : это не число!')
         return get_users_who_will_play_durak_game()
-
-
-def calc_points_player_cards(player_cards):
-    summa = 0
-
-    for card in player_cards:
-        summa += card.nominal
-
-    return summa
